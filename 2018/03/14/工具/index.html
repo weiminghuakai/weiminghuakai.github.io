@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>Hello World | Hexo</title>
+<title>Gulp简介 | Hexo</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -125,9 +125,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="Gulp简介">
             
-	            Hello World
+	            Gulp简介
             
         </h1>
         <div class="post-meta">
@@ -135,8 +135,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/ ">
-             
+        <a href="/categories/工具">
+            工具
         </a>
     </span>
     
@@ -145,7 +145,9 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-                 
+            <a href="/tags/gulp">
+               gulp
+            </a>
             
         </span>
     </span>
@@ -162,15 +164,109 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h1><h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
+<li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
+<li>我们要提高效率，就必须减少重复的工作</li>
+<li>使用less之类预处理的CSS coffeescript</li>
+<li>提供开发阶段的便利，开发阶段更快捷</li>
+<li>现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上</li>
+<li>Gulp就是一种可以自动化完成我们开发过程中大量的重复工作<ul>
+<li>预处理语言的编译</li>
+<li>js css html 压缩混淆</li>
+<li>图片体积优化</li>
+</ul>
+</li>
+<li>除gulp之外还有一些类似的自动化工具，比如grunt</li>
+<li>what how why</li>
+</ul>
+<h2 id="Gulp简介"><a href="#Gulp简介" class="headerlink" title="Gulp简介"></a>Gulp简介</h2><ul>
+<li>当下最流行的自动化工具<ul>
+<li>什么是自动化构建工具？</li>
+<li>自动完成一系列重复的操作<ul>
+<li>less → css</li>
+<li>coffeescript → js</li>
+<li>css压缩</li>
+<li>js混淆</li>
+<li>html压缩</li>
+<li>img尺寸优化</li>
+<li>。。。。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>链接：</p>
+<ul>
+<li><a href="http://gulpjs.com/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="http://www.gulpjs.com.cn/" target="_blank" rel="noopener">中文网</a></li>
+</ul>
+</li>
+<li><p>gulp的包既包含工具，也包含一些编程的API</p>
+</li>
+</ul>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>安装Node.js<ul>
+<li>Node.js 给前端带来了一场工业革命</li>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a></li>
+<li>安装完成过后可以通过命令行工具node -v</li>
+<li>安装nodejs过程会自动安装npm(node packages manager)</li>
+<li>npm 3 以前的版本文件依赖是层级依赖</li>
+<li>npm 3 以后依赖关系改为平行依赖（windows上路径过长问题）</li>
+<li>gulp本身是node的模块</li>
+</ul>
+</li>
+<li>安装 gulp 命令行工具<ul>
+<li><code>npm install -g gulp</code></li>
+<li>-g 指的是在全局作用域中安装</li>
+<li>测试命令 gulp -v</li>
+</ul>
+</li>
+<li>初始化 gulp 项目<ul>
+<li>在本地安装gulp包</li>
+<li>npm install gulp –save</li>
+</ul>
+</li>
+<li>创建任务 - gulpfile.js<ul>
+<li>gulpfile.js 就是gulp的主文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ul>
+<li>定义一个任务</li>
+<li>复制单个文件</li>
+<li>复制多个文件</li>
+<li><a href="https://github.com/isaacs/node-glob" target="_blank" rel="noopener">globs匹配语法</a><ul>
+<li>src/*</li>
+<li>src/*/*</li>
+<li>src/**/*</li>
+<li>src/*.jpg</li>
+<li>src/*.{jpg,png}</li>
+<li>多个globs<ul>
+<li>[‘src/*.{jpg,png}’,’a/a.html’]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>排除某些文件<ul>
+<li>!xxxxx</li>
+</ul>
+</li>
+<li>默认任务<ul>
+<li>gulp 中的任务名有个特殊值 default</li>
+</ul>
+</li>
+<li>文件监视自动执行任务</li>
+</ul>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul>
+<li><a href="https://www.npmjs.com/package/gulp-less" target="_blank" rel="noopener">编译 Less：gulp-less</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-jade" target="_blank" rel="noopener">编译 Jade: gulp-jade</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-connect" target="_blank" rel="noopener">创建本地服务器：gulp-connect</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-concat" target="_blank" rel="noopener">合并文件：gulp-concat</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-uglify" target="_blank" rel="noopener">最小化 js 文件：gulp-uglify</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-rename" target="_blank" rel="noopener">重命名文件：gulp-rename</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-css" target="_blank" rel="noopener">最小化 css 文件：gulp-minify-css</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-minify-html" target="_blank" rel="noopener">压缩html文件 gulp-minify-html</a></li>
+<li><a href="https://www.npmjs.com/package/gulp-imagemin" target="_blank" rel="noopener">最小化图像：gulp-imagemin</a></li>
+</ul>
 
     </div>
 
@@ -188,8 +284,8 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/03/14/工具/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
+        <a href="/2018/03/14/hello-world/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
