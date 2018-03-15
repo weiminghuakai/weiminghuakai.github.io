@@ -203,8 +203,8 @@
 <ul>
 <li>然后再到当前项目中 node_modules 目录中找；</li>
 </ul>
-<h3 id="如何管理好自己的包包"><a href="#如何管理好自己的包包" class="headerlink" title="如何管理好自己的包包"></a>如何管理好自己的包包</h3><ul>
-<li>由于<code>Node</code>本身并没有太多的功能性<code>API</code>，所以市面上涌现出大量的第三方人员开发出来的<code>Package</code><br><img src="./img/npm.png" alt="www.npmjs.com"></li>
+<h3 id="如何管理好自己的包"><a href="#如何管理好自己的包" class="headerlink" title="如何管理好自己的包"></a>如何管理好自己的包</h3><ul>
+<li>由于<code>Node</code>本身并没有太多的功能性<code>API</code>，所以市面上涌现出大量的第三方人员开发出来的<code>Package</code><br><img src="/img/npm.png" alt="www.npmjs.com"></li>
 <li>包的生态圈一旦繁荣起来，就必须有工具去代替人脑或者文档的方式管理</li>
 <li>这时候<code>NPM</code>诞生了</li>
 </ul>
@@ -388,8 +388,7 @@
 <p>补零操作<br>查找有没有同样的被除数存在，如果有，就找到了循环节，计算循环节长度并返回。在没有找到的前提下，把当前被除数记录下来，并得到余数作为下一次的被除数。<br>这里需要注意，如果某一次出现了除尽的情况，说明该分数是有限小数，循环节长度是0。<br>JavaScript</p>
 <p>console.log(foo(11, 3));<br>console.log(foo(1, 7));;<br>console.log(foo(2, 10));;<br>function foo(a, b) {<br>  if (!(a % b)) {<br>    return <code>${a}÷${b}:${a / b}</code>;<br>  }<br>  var all = (a / b).toString().split(‘.’);<br>  var i = getCycleSection(a, b);<br>  if(i)<br>    return <code>${a}÷${b}: ${all[0]}.{${all[1].substr(0, i) }}</code>;<br>    return <code>${a}÷${b}: ${a / b}</code>;</p>
 <p>}<br>function getCycleSection(n, m) {<br>  var temp = [];<br>  while (true) {<br>    while (n &lt; m) {<br>      n *= 10;<br>    }<br>    var index = temp.indexOf(n);<br>    if (index &gt;= 0) {<br>      return temp.length - index;<br>    }<br>    temp.push(n);<br>    n %= m;<br>    if (!n)<br>      return 0;<br>  }<br>}</p>
-<hr>
-<h2 id="网络操作-1"><a href="#网络操作-1" class="headerlink" title="网络操作"></a>网络操作</h2>
+
     </div>
 
     <div class="post-footer">   
@@ -405,6 +404,8 @@
 </article>
 
 <div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/03/15/前端/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
         <a href="/2018/03/15/谈人生/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
@@ -509,7 +510,7 @@
         
     <div class="widget">
         <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/工作学习/"><i class="fa" aria-hidden="true">工作学习</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/知识点/"><i class="fa" aria-hidden="true">知识点</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/谈人生/"><i class="fa" aria-hidden="true">谈人生</i></a><span class="category-list-count">1</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link current" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工作学习/"><i class="fa" aria-hidden="true">工作学习</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/知识点/"><i class="fa" aria-hidden="true">知识点</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/谈人生/"><i class="fa" aria-hidden="true">谈人生</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
@@ -517,7 +518,7 @@
         
     <div class="widget">
       <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">三月 2018</i></a><span class="archive-list-count">4</span></li></ul>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">三月 2018</i></a><span class="archive-list-count">5</span></li></ul>
     </div>
 
 
@@ -526,7 +527,7 @@
   <div class="widget">
     <h3 class="title">标签云</h3>
     <div class="content tag-cloud">
-        <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+        <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
     </div>
   </div>
 
