@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>css3个人总结---2 | wxcYa</title>
+<title>jQuery的fullpage插件使用 | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -125,9 +125,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="css3个人总结---2">
+        <h1 id="jQuery的fullpage插件使用">
             
-	            css3个人总结---2
+	            jQuery的fullpage插件使用
             
         </h1>
         <div class="post-meta">
@@ -145,8 +145,8 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            <a href="/tags/css3">
-               css3
+            <a href="/tags/插件">
+               插件
             </a>
             
         </span>
@@ -155,7 +155,7 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2018/04/08</span>
+        <span class="date-meta">2018/04/09</span>
     </span>
 </div>
 
@@ -164,41 +164,23 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id="css3动画"><a href="#css3动画" class="headerlink" title="css3动画"></a>css3动画</h1><h2 id="1-动画animate"><a href="#1-动画animate" class="headerlink" title="1.动画animate"></a>1.动画animate</h2><blockquote>
-<p>@keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。<br>animation-name:retateA;定义动画的名字</p>
+        <h1 id="jQuery的一个全屏滚动插件fullPage-js"><a href="#jQuery的一个全屏滚动插件fullPage-js" class="headerlink" title="jQuery的一个全屏滚动插件fullPage.js"></a>jQuery的一个全屏滚动插件fullPage.js</h1><blockquote>
+<p>手指或者鼠标滑动一下就是一整屏切换，而且还有各种效果 </p>
 </blockquote>
-<p>animation-duration:0.8s;动画的持续时间</p>
-<p>animation-timing-function:ease;</p>
-<blockquote>
-<p>规定动画的速度曲线。默认是 “ease”。 ease、ease-in 加速、ease-out减速</p>
-</blockquote>
-<p>animation-delay:1s;规定动画何时开始。默认是 0。延迟时间带单位</p>
-<p>animation-iteration-count:10或者是infinite;</p>
-<blockquote>
-<p>规定动画被播放的次数。默认是 1。动画执行次数，可以是数字或者infinite无限次</p>
-</blockquote>
-<p>animation-direction:;规定动画是否在下一周期逆向地播放。</p>
-<blockquote>
-<p>默认是 “normal”。alternate指的是执行的方向是来回的    normal和reverse 正常播放动画顺序和反序播放。</p>
-</blockquote>
-<p>animation-play-state:;    规定动画是否正在运行或暂停。默认是 “running”。</p>
-<blockquote>
-<p>running：当前动画正在运行，paused:当前动画以被停止。</p>
-</blockquote>
-<p>animation-fill-mode:;规定对象动画时间之后的状态。    </p>
-<blockquote>
-<p>none：默认值，回到动画没开始时的状态。backwards：让动画回到第一帧的状态。both: 根据animation-direction（见后）轮流应用forwards和backwards规则。</p>
-</blockquote>
-<h3 id="动画合写的语法："><a href="#动画合写的语法：" class="headerlink" title="动画合写的语法："></a>动画合写的语法：</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation</span>: <span class="selector-tag">name</span> <span class="selector-tag">duration</span> <span class="selector-tag">timing-function</span> <span class="selector-tag">delay</span> <span class="selector-tag">iteration-count</span> <span class="selector-tag">direction</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>通过@keyframes 关键帧来使用动画 （相当于一个公共的动画函数）<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> rotateA&#123;</span><br><span class="line">	0%&#123; <span class="attribute">background-color</span>:red;&#125;</span><br><span class="line">	50%&#123;<span class="attribute">background-color</span>:blue;&#125;</span><br><span class="line">	100%&#123;<span class="attribute">background-color</span>:green;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://cdnjs.com/libraries/fullPage.js" target="_blank" rel="noopener">fullpage地址</a></p>
+<h2 id="animate-css"><a href="#animate-css" class="headerlink" title="animate.css"></a>animate.css</h2><blockquote>
+<p>配合animate.css实现动态效果案例。首先说明animate.css本身就有兼容问题，ie9+浏览器可以无视，另外考虑到手机的性能，移动端尽量不要使用大量动画</p>
 </blockquote>
 <blockquote>
-<p>开始的时候可以使from 结束的时候可以是to</p>
+<p>一般情况下都是用户进入某个屏的时候，动画开始启动入场，离开的时候启动出场（可以省略），然后下一屏开始入场。配合animate.css的问题，animate的动画添加上animated样式和具体的动画类型才会具有动画效果。如果一开始全设置好了那么只有第一屏有动画效果，不是我们想要的结果。</p>
 </blockquote>
-<p><code>参考库</code>  <a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">animate.css</a></p>
-<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3> <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-class">.box</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: lightgreen;</span><br><span class="line">				<span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br><span class="line">&lt;link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">		&lt;div class="box animated bounce infinite"&gt;&lt;/div&gt;</span><br><span class="line">	&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="动画暂停案例："><a href="#动画暂停案例：" class="headerlink" title="动画暂停案例："></a>动画暂停案例：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type="text/css"&gt;</span><br><span class="line">			<span class="selector-class">.box</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">				<span class="attribute">background-color</span>: lightgreen;</span><br><span class="line">				<span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">				<span class="attribute">animation</span>:r <span class="number">2s</span> linear infinite normal;</span><br><span class="line">			&#125;</span><br><span class="line">			@<span class="keyword">keyframes</span> r&#123;</span><br><span class="line">				<span class="selector-tag">from</span> &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg);&#125;</span><br><span class="line">				50%&#123;<span class="attribute">transform</span>:<span class="built_in">rotate</span>(180deg);&#125;</span><br><span class="line">				<span class="selector-tag">to</span>&#123;<span class="attribute">transform</span>:<span class="built_in">rotate</span>(360deg);&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.box</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">				<span class="attribute">animation-play-state</span>:paused;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/style&gt;</span><br><span class="line">		</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">		&lt;div class="box animated bounce infinite"&gt;&lt;/div&gt;</span><br><span class="line">	&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>配合fullpage的onLeave事件，可以实现在上一屏离开的时候，给下一屏添加动画样式类，并把上一屏的动画样式类去掉。动画样式类可以提前记录在一个数组中或者是放到动画元素的自定义属性中</strong></p>
+<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><ul>
+<li>引入jquery</li>
+<li>引入jquery的fullpage插件的js脚本和样式</li>
+<li>编写html标签（编写全屏的html）</li>
+<li>编写jquery的插件fullpage的初始化代码<h2 id="全屏案例"><a href="#全屏案例" class="headerlink" title="全屏案例"></a><strong><a href="http://fp.ccvtt.com/" target="_blank" rel="noopener">全屏案例</a></strong></h2></li>
+</ul>
 
     </div>
 
@@ -216,10 +198,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/04/09/jQuery的fullpage插件使用/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+        <a href="/2018/04/10/css个人总结-3/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
     
-        <a href="/2018/03/28/hello-world/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/2018/04/08/前端/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 

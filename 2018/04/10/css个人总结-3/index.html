@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="wxcYa">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>css个人总结---3 | wxcYa</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/观后感/"><i class="fa fa-fw "></i>观后感</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/生活笔记/"><i class="fa fa-fw "></i>生活笔记</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/关于我/"><i class="fa fa-fw "></i>关于我</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="css个人总结---3">
+            
+	            css个人总结---3
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/css3">
+               css3
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/04/10</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="伸缩布局"><a href="#伸缩布局" class="headerlink" title="伸缩布局"></a>伸缩布局</h2><h3 id="display-flex"><a href="#display-flex" class="headerlink" title="display: flex;"></a>display: flex;</h3><blockquote>
+<p>注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+</blockquote>
+<blockquote>
+<p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。</p>
+</blockquote>
+<h3 id="当为父元素设置display-flex-后，那么就可以设置父元素的主轴或者侧轴方向以及布局了"><a href="#当为父元素设置display-flex-后，那么就可以设置父元素的主轴或者侧轴方向以及布局了" class="headerlink" title="当为父元素设置display:flex;后，那么就可以设置父元素的主轴或者侧轴方向以及布局了"></a>当为父元素设置display:flex;后，那么就可以设置父元素的主轴或者侧轴方向以及布局了</h3><p>1.设置父容器的主轴排版方向：</p>
+<p>flex-direction属性决定主轴的方向（即项目的排列方向）</p>
+<p>可以设置四个值：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-direction: row | row-reverse | column | column-reverse;</span><br></pre></td></tr></table></figure>
+<p>row 代表水平向右排列子元素。默认值。<br>row-reverse 跟row相反方向排列子元素。<br>column 从上到下垂直排列子元素<br>column-reverse 垂直从下向上排列子元素</p>
+<blockquote>
+<p>综合使用：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display:flex; flex-direction: row | row-reverse | column | column-reverse;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>2.设置父容器主轴子元素换行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.box</span>&#123;</span><br><span class="line">   <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>nowrap（默认）：不换行。<br>wrap：换行，第一行在上方。<br>wrap-reverse：换行，第一行在下方。</p>
+<p>3.flex-flow</p>
+<blockquote>
+<p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>4.设置父容器的主轴的子元素排版对齐方式</p>
+<blockquote>
+<p>justify-content属性定义了元素在主轴上的对齐方式。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">flex-start</span>（默认值）：左对齐</span><br><span class="line"><span class="selector-tag">flex-end</span>：右对齐</span><br><span class="line"><span class="selector-tag">center</span>： 居中</span><br><span class="line"><span class="selector-tag">space-between</span>：两端对齐，项目之间的间隔都相等。</span><br><span class="line"><span class="selector-tag">space-around</span>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>5.设置父容器侧轴的元素的对齐方式</p>
+<blockquote>
+<p>align-items属性定义项目在侧轴上如何对齐。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  align-items: flex-start | flex-end | center ;(baseline | stretch;&#125;) 后两个浏览器不怎么兼容</span><br><span class="line"><span class="selector-tag">flex-start</span>：交叉轴的起点对齐。</span><br><span class="line"><span class="selector-tag">flex-end</span>：交叉轴的终点对齐。</span><br><span class="line"><span class="selector-tag">center</span>：交叉轴的中点对齐。</span><br><span class="line"><span class="selector-tag">baseline</span>: 项目的第一行文字的基线对齐。</span><br><span class="line"><span class="selector-tag">stretch</span>（默认值）：如果项目未设置高度或设为<span class="selector-tag">auto</span>，将占满整个容器的高度。</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>6.设置父容器多行子项整体垂直对齐方式</p>
+<blockquote>
+<p>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+</blockquote>
+<p><code>核心是一定是盒子内部的元素超过了盒子容器的宽度（默认）出现了换行，也就是有多行才可以。</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 属性可以取6个值： */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">flex-start</span>：与交叉轴的起点对齐。</span><br><span class="line"><span class="selector-tag">flex-end</span>：与交叉轴的终点对齐。</span><br><span class="line"><span class="selector-tag">center</span>：与交叉轴的中点对齐。</span><br><span class="line"><span class="selector-tag">space-between</span>：与交叉轴两端对齐，轴线之间的间隔平均分布。</span><br><span class="line"><span class="selector-tag">space-around</span>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</span><br><span class="line"><span class="selector-tag">stretch</span>（默认值）：轴线占满整个交叉轴。</span><br></pre></td></tr></table></figure></p>
+<p>7.设置子盒子的排序order</p>
+<blockquote>
+<p>css3新增加order属性定义项目的排列顺序,是数值类型。数值越小，排列越靠前，默认为0。</p>
+</blockquote>
+<p><code>注意此属性设置在子盒子上，浏览器自动按照order的大小排序盒子，默认都是0，如果相同的order则按照编写标签的顺序排放盒子。</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.child-item</span> &#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>8.设置子盒子放大占比</p>
+<blockquote>
+<p>flex-grow属性可以直接赋值一个数值。定义了它所占的比例。默认是0，也就是不放大（即使父盒子有空隙）。</p>
+</blockquote>
+<p><code>一行的子盒子同时设置flex-grow属性的话，会根据设置的值的大小按比例排放子元素。</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item1</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item2</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item3</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item4</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item5</span> &#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>9.设置子盒子缩小占比</p>
+<blockquote>
+<p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+</blockquote>
+<p><code>注意：负值对该属性无效。</code></p>
+<p>10.设置子盒子默认占比宽度</p>
+<blockquote>
+<p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>它可以设为跟width属性一样的值（比如350px），则项目将占据固定空间。</code></p>
+<p>11.flex属性合写</p>
+<blockquote>
+<p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  flex: none | [ &amp;lt;'flex-grow'&amp;gt; &amp;lt;'flex-shrink'&amp;gt;? || &amp;lt;'flex-basis'&amp;gt; ]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。 */</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<p><strong>flex:1;意思是让所有弹性盒模型对象的子元素都有相同的长度，忽略它们内部的内容</strong></p>
+<p>12.设置子盒子对齐方式</p>
+<blockquote>
+<p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="13-多列布局"><a href="#13-多列布局" class="headerlink" title="13.多列布局"></a>13.多列布局</h2><blockquote>
+<p>column-width 给列定义个最小的宽度。默认值为auto表示将根据column-count列的数量自动调整列宽。</p>
+</blockquote>
+<ul>
+<li>column-count 最大列数。</li>
+<li>columns 合写以上两个属性。第一个是列宽，第二个是列数。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.txt-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">columns</span>: <span class="number">300px</span> <span class="number">2</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>column-gap 是列间距，默认值normal，相当于1em。需要注意的是，如果column-gap与column-width加起来大于总宽度的话，就无法显示column-count指定的列数，会被浏览器自动调整列数和列宽</p>
+</blockquote>
+<blockquote>
+<p>column-rule 用于设置列的边框，类似于border，区别是不占用任何空间，因此设了column-rule不会导致列宽的变化。另外如果边框宽度大于column-gap列间距，将不会显示边框。语法和border类似，例如column-rule: 1px solid #000;</p>
+</blockquote>
+<blockquote>
+<p>column-span 用于跨列，默认值none表示不跨列，all表示跨越所有列。例如文章标题可以设成all来跨列。</p>
+</blockquote>
+<blockquote>
+<p>column-fill 用于统一列高。默认值auto各列的高度随内容自动调整，balance所有列高都设为最高的列高</p>
+</blockquote>
+<h1 id="在线字体图标："><a href="#在线字体图标：" class="headerlink" title="在线字体图标："></a>在线字体图标：</h1><p><strong>@font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中，允许我们不依赖操作系统的字体，做到全平台字体统一和定制</strong></p>
+<p>定义字体的语法：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: &lt;YourWebFontName&gt;;</span><br><span class="line">  <span class="attribute">src</span>: &lt;source&gt; [&lt;format&gt;][,&lt;source&gt; [&lt;format&gt;]]*;</span><br><span class="line">  [font-weight: &lt;weight&gt;];</span><br><span class="line">  <span class="selector-attr">[font-style: &lt;style&gt;]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>取值说明：</p>
+<p>YourWebFontName:此值指的就是你自定义的字体名称，他将被引用到你的Web元素中的font-family。如“font-family:”YourWebFontName”;”<br>source:此值指的是你自定义的字体的存放路径，可以是相对路径也可以是绝路径；<br>format：此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype,opentype,truetype-aat,embedded-opentype,avg等；<br>weight和style:这两个值大家一定很熟悉，weight定义字体是否为粗体，style主要定义字体样式。</p>
+<blockquote>
+<p>在@font-face中我们至少需要.woff,.eot两种格式字体，甚至还需要.svg等字体达到更多种浏览版本的支持</p>
+</blockquote>
+<p><a href="fontawwsome.com">fontawwsome.com</a>使用字体图标<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"fa-3x"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-spinner fa-spin"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-circle-notch fa-spin"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-sync fa-spin"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-cog fa-spin"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-spinner fa-pulse"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  <span class="comment">&lt;!--这段代码能够将图标旋转 --&gt;</span></span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<h2 id="字体图标使用案例"><a href="#字体图标使用案例" class="headerlink" title="字体图标使用案例"></a><strong><a href="http://fp.ccvtt.com/" target="_blank" rel="noopener">字体图标使用案例</a></strong></h2>
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/04/09/jQuery的fullpage插件使用/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>主题Snippet v1.2.0版本已经上线！欢迎更新~ <br/>
+主题下载：<a href="https://github.com/shenliyang/hexo-theme-snippet" title="fork me" target="_blank">Snippet主题</a> <br/>
+<hr/>接受贡献，包括不限于提交问题与需求，修复代码。欢迎Pull Request<br/>支持主题：<a href="https://github.com/shenliyang/hexo-theme-snippet/stargazers">Star一下</a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/weiminghuakai" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="mailto:wxc834448361@163.com" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/关于我/"><i class="fa" aria-hidden="true">关于我</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活笔记/"><i class="fa" aria-hidden="true">生活笔记</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/观后感/"><i class="fa" aria-hidden="true">观后感</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">四月 2018</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">三月 2018</i></a><span class="archive-list-count">6</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/css3/" style="font-size: 20px;">css3</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/插件/" style="font-size: 10px;">插件</a> <a href="/tags/面向对象/" style="font-size: 10px;">面向对象</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.cnblogs.com/ccvtt/" class="fa" target="_blank">个人博客</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
