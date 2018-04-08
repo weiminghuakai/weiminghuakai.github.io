@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>标签: css3 | wxcYa</title>
+<title>git命令以及利用girhub搭建网站 | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -121,88 +121,173 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="git命令以及利用girhub搭建网站">
+            
+	            git命令以及利用girhub搭建网站
+            
+        </h1>
+        <div class="post-meta">
     
-        css3 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/观后感">
+            观后感
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/git 搭建网站">
+               git 搭建网站
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/04/12</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/10/css个人总结-3/">css个人总结---3</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月10日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    伸缩布局display: flex;
-注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="命令清单（持续更新）"><a href="#命令清单（持续更新）" class="headerlink" title="命令清单（持续更新）"></a>命令清单（持续更新）</h2><ul>
+<li>cd:切换目录  <blockquote>
+<p>cd ./xxx/xxxx</p>
+</blockquote>
+</li>
+<li>nvm ls 查看nvm的版本</li>
+<li>nvm use XXX 使用XXX版本<blockquote>
+<p>nvm use 5.5.0  使用5.5.0版本</p>
+</blockquote>
+</li>
+<li>node -v 查看当前使用的node版本</li>
+<li>npm -v 查看当前使用的npm版本</li>
+<li>.exit 退出node环境</li>
+<li>clear清空控制台</li>
+<li>ls查看当前目录的所有文件</li>
+<li>cd ../ 切换到上一级目录</li>
+<li>git init 初始化一个空的仓库</li>
+<li>git status 查看所有文件状态</li>
+<li>git add –all</li>
+<li>git commit -m ‘initial commit’ 初始化提交</li>
+</ul>
+<h2 id="github上传文件步骤："><a href="#github上传文件步骤：" class="headerlink" title="github上传文件步骤："></a>github上传文件步骤：</h2><ol>
+<li><p>打开git-bash.exe程序</p>
+</li>
+<li><p>切换到需要上传文件的目录：</p>
+<blockquote>
+<p>切换目录 cd /E/Practice/git-demo</p>
+</blockquote>
+</li>
+<li><p>github创建项目名称</p>
+</li>
+<li><p>例如：将文件上传到这个项目下面</p>
+<blockquote>
+<p>git remote add origin    <a href="https://github.com/weiminghuakai/git-demo.git" target="_blank" rel="noopener">https://github.com/weiminghuakai/git-demo.git</a></p>
+</blockquote>
+</li>
+<li><p>git remote -v查看分支（可有可无）</p>
+</li>
+<li><p>git log查看日志（可有可无）</p>
+</li>
+<li><p>git push -u origin master 上传文件到主分支并填写用户名和密码</p>
+</li>
+<li><p>git pull origin master  将上传到github的文件下载查看</p>
+</li>
+</ol>
+<h2 id="git切换增加的分支：（利用这个做网页）"><a href="#git切换增加的分支：（利用这个做网页）" class="headerlink" title="git切换增加的分支：（利用这个做网页）"></a>git切换增加的分支：（利用这个做网页）</h2><ol>
+<li>查看有哪些分支：git branch </li>
+<li>增加一个叫做v2的分支：git branch v2</li>
+<li>再次查看有哪些分支：git branch</li>
+<li>切换到v2分支：git checkout v2</li>
+<li>将v2分支添加到GitHub：git push -u  origin v2  然后输入用户名和密码</li>
+<li>改变本地文件</li>
+<li>查看当前状态：git status</li>
+<li>将被修改过或已删除文件和所有未被跟踪的文件信息添加到索引库：git add –all</li>
+<li>然后git commit -m ‘v2版本的第一次提交’（某种程度上相当于git add和git commit -m的组合技，前提是被改动文件已经是tracked）</li>
+<li>再次与远端同步一下：git push -u origin v2 然后输入用户名和密码</li>
+</ol>
+<h2 id="将网站托管到GitHub并加上域名"><a href="#将网站托管到GitHub并加上域名" class="headerlink" title="将网站托管到GitHub并加上域名"></a>将网站托管到GitHub并加上域名</h2><ol>
+<li>git init 初始化一个空的仓库</li>
+<li>git status查看未被跟踪的文件</li>
+<li>git add –all</li>
+<li>git status</li>
+<li>git commit -m ‘initial commit’初始化提交</li>
+<li><p>上面的操作都是提交在本地，下面是</p>
+<blockquote>
+<p>在服务端在创建一个仓库,然后再将地址粘贴进来 git remote add origin <a href="https://github.com/weiminghuakai/XXX.git" target="_blank" rel="noopener">https://github.com/weiminghuakai/XXX.git</a></p>
+</blockquote>
+</li>
+<li><p>git push -u origin master 提交用户名和密码</p>
+</li>
+<li>创建新的分支 git branch gh-pages</li>
+<li>切换到分支 git  checkout gh-pages</li>
+<li>切换到远端的分支 git push -u origin gh-pages 输入用户名和密码</li>
+<li>例如：github的访问地址是：weiminghuakai.github.io/XXX</li>
+<li>绑定域名 </li>
+</ol>
+<ul>
+<li>创建CNAME的文件，将需要绑定的域名放在里面 比如ccvtt.com</li>
+<li>域名解析步骤：主机记录：XXX 记录类型：CNAME 记录值：github地址（weiminghuakai.github.io）然后保存就行了</li>
+</ul>
+<ol>
+<li>将CNAME文件提交<ul>
+<li>github status</li>
+<li>git add  –all</li>
+<li>git commit -m ‘添加域名绑定’</li>
+</ul>
+<ol>
+<li>push到远端：git push -u origin gh-pages  输入用户名和密码 </li>
+</ol>
+</li>
+</ol>
+<h3 id="个人网站案例"><a href="#个人网站案例" class="headerlink" title="个人网站案例"></a><strong><a href="http://www.ccvtt.com/" target="_blank" rel="noopener">个人网站案例</a></strong></h3>
+    </div>
 
-
-采用 Flex 布局的元素，称为 Flex 容器（flex container），简称...
-                
-            </p> 
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/08/前端/">css3个人总结---2</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月08日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    css3动画1.动画animate
-@keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。animation-name:retateA;定义动画的名字
-...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/21/前端/">css3个人总结及demo</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月21日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    css3基础总结选择器
-段落中的第一个字符：p::first-letter{font-size:40px;}
-段落中的第一行：p::first-line{color:red;}
-选中时的样式：p::selection{backgrou...
-                
-            </p> 
-        </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/04/11/sass相关知识/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
 
 
 
