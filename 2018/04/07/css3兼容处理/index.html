@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>标签: css3 | wxcYa</title>
+<title>css3兼容处理 | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -121,88 +121,114 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="css3兼容处理">
+            
+	            css3兼容处理
+            
+        </h1>
+        <div class="post-meta">
     
-        css3 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/兼容处理">
+               兼容处理
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/04/07</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/10/css个人总结-3/">css个人总结---3</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月10日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    伸缩布局display: flex;
-注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="自动化构建-js的压缩，图片处理，sass，less编译等"><a href="#自动化构建-js的压缩，图片处理，sass，less编译等" class="headerlink" title="自动化构建 (js的压缩，图片处理，sass，less编译等)"></a>自动化构建 (js的压缩，图片处理，sass，less编译等)</h2><blockquote>
+<p>自动化构建工具：webpack、gulp、grunt都可以实现css3属性前缀的自动化添加。在此我只演示一下gulp的应用</p>
+</blockquote>
+<h3 id="gulp自动化配置和安装演示"><a href="#gulp自动化配置和安装演示" class="headerlink" title="gulp自动化配置和安装演示"></a>gulp自动化配置和安装演示</h3><ul>
+<li>安装node环境（已安装，略过)</li>
+<li>安装gulp的全局的包: $ npm i -g gulp</li>
+<li>初始化项目的npm配置文件和初始化安装要gulp和gulp的插件的项目本地插件包<ul>
+<li>$ npm init -y     # 初始化项目的npm配置文件</li>
+<li>$ npm i -S gulp   # 安装gulp到本地项目（仅开发时使用，S大写）</li>
+<li>$ npm i -S gulp-autoprefixer   #  安装gulp-autoprefixer插件（为css3属性添加前缀）</li>
+<li>$ npm i -S gulp-rename  # gulp的重命名插件</li>
+</ul>
+</li>
+<li>在项目根目录下创建一个名为 gulpfile.js 的文件（此文件可以直接使用，但是要处理css的文件位置）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),     <span class="comment">// 引用gulp</span></span><br><span class="line">  autoprefixer = <span class="built_in">require</span>(<span class="string">'gulp-autoprefixer'</span>), <span class="comment">// 添加引用前缀的gulp插件</span></span><br><span class="line">  rename = <span class="built_in">require</span>(<span class="string">"gulp-rename"</span>);  <span class="comment">// 引用重命名的gulp插件</span></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'t1'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  gulp.src(<span class="string">'./css/**/*.css'</span>)    <span class="comment">// 设置要处理的原始的文件位置</span></span><br><span class="line">    .pipe(autoprefixer())</span><br><span class="line">    .pipe(rename(&#123;</span><br><span class="line">      suffix: <span class="string">".min"</span>,           <span class="comment">// 添加后缀</span></span><br><span class="line">      extname: <span class="string">".css"</span>           <span class="comment">// 文件扩展名</span></span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(<span class="string">'./css/'</span>)); <span class="comment">// 最终文件输出的位置</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>可以根据你的情况修改路径，当前默认是你项目根目录下有个css目录，自动为css目录下面的所有文件自动创建一个*.min，css对应文件，就是最终使用的，这里没有进行压缩，如果需要压缩可以添加gulp的压缩插件。</p>
+<ul>
+<li>接下来在命令终端进入gulpfile.js文件的目录执行<ul>
+<li>$ gulp t1 可以在项目中看到新生成的文件了</li>
+<li><a href="https://www.gulpjs.com.cn/" target="_blank" rel="noopener">gulp 在线文档</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>项目一般情况下分为source和dist文件夹 source放源代码 dist放最终发布的项目，压缩完处理好的</strong></p>
+<blockquote>
+<p>vscode中可以安装powershell插件，直接在vscode中使用</p>
+</blockquote>
 
+    </div>
 
-采用 Flex 布局的元素，称为 Flex 容器（flex container），简称...
-                
-            </p> 
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/04/08/前端/">css3个人总结---2</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年04月08日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    css3动画1.动画animate
-@keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。animation-name:retateA;定义动画的名字
-...
-                
-            </p> 
-        </div>
-    </article>
- 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/21/前端/">css3个人总结及demo</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月21日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    css3基础总结选择器
-段落中的第一个字符：p::first-letter{font-size:40px;}
-段落中的第一行：p::first-line{color:red;}
-选中时的样式：p::selection{backgrou...
-                
-            </p> 
-        </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/04/08/前端/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2018/03/28/hello-world/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
 
 
 
