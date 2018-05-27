@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>jQuery的fullpage插件使用 | wxcYa</title>
+<title>vue1 | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -125,9 +125,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="jQuery的fullpage插件使用">
+        <h1 id="vue1">
             
-	            jQuery的fullpage插件使用
+	            vue1
             
         </h1>
         <div class="post-meta">
@@ -135,8 +135,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/前端">
-            前端
+        <a href="/categories/观后感">
+            观后感
         </a>
     </span>
     
@@ -145,8 +145,8 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            <a href="/tags/插件">
-               插件
+            <a href="/tags/vue">
+               vue
             </a>
             
         </span>
@@ -155,7 +155,7 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2018/04/09</span>
+        <span class="date-meta">2018/05/28</span>
     </span>
 </div>
 
@@ -164,23 +164,88 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id="jQuery的一个全屏滚动插件fullPage-js"><a href="#jQuery的一个全屏滚动插件fullPage-js" class="headerlink" title="jQuery的一个全屏滚动插件fullPage.js"></a>jQuery的一个全屏滚动插件fullPage.js</h1><blockquote>
-<p>手指或者鼠标滑动一下就是一整屏切换，而且还有各种效果 </p>
-</blockquote>
-<p><a href="https://cdnjs.com/libraries/fullPage.js" target="_blank" rel="noopener">fullpage地址</a></p>
-<h2 id="animate-css"><a href="#animate-css" class="headerlink" title="animate.css"></a>animate.css</h2><blockquote>
-<p>配合animate.css实现动态效果案例。首先说明animate.css本身就有兼容问题，ie9+浏览器可以无视，另外考虑到手机的性能，移动端尽量不要使用大量动画</p>
-</blockquote>
-<blockquote>
-<p>一般情况下都是用户进入某个屏的时候，动画开始启动入场，离开的时候启动出场（可以省略），然后下一屏开始入场。配合animate.css的问题，animate的动画添加上animated样式和具体的动画类型才会具有动画效果。如果一开始全设置好了那么只有第一屏有动画效果，不是我们想要的结果。</p>
-</blockquote>
-<p><strong>配合fullpage的onLeave事件，可以实现在上一屏离开的时候，给下一屏添加动画样式类，并把上一屏的动画样式类去掉。动画样式类可以提前记录在一个数组中或者是放到动画元素的自定义属性中</strong></p>
-<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><ul>
-<li>引入jquery</li>
-<li>引入jquery的fullpage插件的js脚本和样式</li>
-<li>编写html标签（编写全屏的html）</li>
-<li>编写jquery的插件fullpage的初始化代码<h2 id="全屏案例"><a href="#全屏案例" class="headerlink" title="全屏案例"></a><strong><a href="http://fp.ccvtt.com/" target="_blank" rel="noopener">全屏案例</a></strong></h2></li>
+        <h1 id="vue个人总结（1）"><a href="#vue个人总结（1）" class="headerlink" title="vue个人总结（1）"></a>vue个人总结（1）</h1><h2 id="1-大概组成"><a href="#1-大概组成" class="headerlink" title="1. 大概组成"></a>1. 大概组成</h2><ul>
+<li>基础语法</li>
+<li>mvvm模式</li>
+<li>组件化</li>
+<li>生命周期</li>
+<li>动画特效</li>
+<li>axios：ajax数据的获取</li>
+<li>vue router：多页面之间的路由</li>
+<li>vuex：各个组件之间的数据共享</li>
+<li>异步组件：代码上线性能更优</li>
+<li>stylus：编写前端的样式</li>
+<li>递归组件：组件自身调用自己的效果</li>
 </ul>
+<h2 id="2-目录讲解"><a href="#2-目录讲解" class="headerlink" title="2. 目录讲解"></a>2. 目录讲解</h2><ul>
+<li>vue.js vue的库文件 </li>
+</ul>
+<h2 id="3-hello-world"><a href="#3-hello-world" class="headerlink" title="3.hello world"></a>3.hello world</h2>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=<span class="string">"app"</span>&gt;&#123;&#123;content&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">	&lt;script&gt;</span></span><br><span class="line"><span class="regexp">		var app = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">			el: '#app',</span></span><br><span class="line"><span class="regexp">			data: &#123;</span></span><br><span class="line"><span class="regexp">               content: 'hello world'</span></span><br><span class="line"><span class="regexp">			&#125;</span></span><br><span class="line"><span class="regexp">		&#125;);</span></span><br><span class="line"><span class="regexp">		/</span><span class="regexp">/两秒钟之后内容发生变化</span></span><br><span class="line"><span class="regexp">		setTimeout(function()&#123;</span></span><br><span class="line"><span class="regexp">			app.$data.content = 'hello111'</span></span><br><span class="line"><span class="regexp">		&#125;,2000)</span></span><br><span class="line"><span class="regexp">	&lt;/</span>script&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建一个vue的实例，{}中是接受到的配置项</li>
+<li>el配置项指的是实例负责管理的一个区域，el: ‘#app’，选项el属性，就是element缩写，当前Vue对象挂载到哪个标签上的语法，支持CSS选择器或者dom对象，一般用id选择器选择当前页面的标签</li>
+<li>Vue的选项：data属性是自定义数据。这里只是演示了一个content属性，vue会把自定义的数据可以与html的模板数据进行绑定。</li>
+<li>Vue 数据绑定的方式就是用，例如<h1 id="vue个人总结（1）"><a href="#vue个人总结（1）" class="headerlink" title="vue个人总结（1）"></a>vue个人总结（1）</h1><h2 id="1-大概组成"><a href="#1-大概组成" class="headerlink" title="1. 大概组成"></a>1. 大概组成</h2><ul>
+<li>基础语法</li>
+<li>mvvm模式</li>
+<li>组件化</li>
+<li>生命周期</li>
+<li>动画特效</li>
+<li>axios：ajax数据的获取</li>
+<li>vue router：多页面之间的路由</li>
+<li>vuex：各个组件之间的数据共享</li>
+<li>异步组件：代码上线性能更优</li>
+<li>stylus：编写前端的样式</li>
+<li>递归组件：组件自身调用自己的效果</li>
+</ul>
+<h2 id="2-目录讲解"><a href="#2-目录讲解" class="headerlink" title="2. 目录讲解"></a>2. 目录讲解</h2><ul>
+<li>vue.js vue的库文件 </li>
+</ul>
+<h2 id="3-hello-world"><a href="#3-hello-world" class="headerlink" title="3.hello world"></a>3.hello world</h2>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=<span class="string">"app"</span>&gt;&#123;&#123;content&#125;&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">	&lt;script&gt;</span></span><br><span class="line"><span class="regexp">		var app = new Vue(&#123;</span></span><br><span class="line"><span class="regexp">			el: '#app',</span></span><br><span class="line"><span class="regexp">			data: &#123;</span></span><br><span class="line"><span class="regexp">               content: 'hello world'</span></span><br><span class="line"><span class="regexp">			&#125;</span></span><br><span class="line"><span class="regexp">		&#125;);</span></span><br><span class="line"><span class="regexp">		/</span><span class="regexp">/两秒钟之后内容发生变化</span></span><br><span class="line"><span class="regexp">		setTimeout(function()&#123;</span></span><br><span class="line"><span class="regexp">			app.$data.content = 'hello111'</span></span><br><span class="line"><span class="regexp">		&#125;,2000)</span></span><br><span class="line"><span class="regexp">	&lt;/</span>script&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建一个vue的实例，{}中是接受到的配置项</li>
+<li>el配置项指的是实例负责管理的一个区域，el: ‘#app’，选项el属性，就是element缩写，当前Vue对象挂载到哪个标签上的语法，支持CSS选择器或者dom对象，一般用id选择器选择当前页面的标签</li>
+<li>Vue的选项：data属性是自定义数据。这里只是演示了一个content属性，vue会把自定义的数据可以与html的模板数据进行绑定。</li>
+<li>Vue 数据绑定的方式就是用{{要绑定的元素}}，例如{{content}}</li>
+</ul>
+<h2 id="4-实现一个todollist的部分功能"><a href="#4-实现一个todollist的部分功能" class="headerlink" title="4.实现一个todollist的部分功能"></a>4.实现一个todollist的部分功能</h2><ul>
+<li>v-for指令 v-for=’item in list’ 意思是告诉vue要循环list这个数据，循环的每一项都放在item中</li>
+<li><p>v-on指令：绑定事件；</p>
+<ul>
+<li><p>指的是在模板的button上面绑定一个事件</p>
+</li>
+<li><p>点击button的时候要在上面执行一个函数，函数的名字叫做“handleBtnClick” 所以v-on:click=”handleBtnClick”</p>
+</li>
+</ul>
+</li>
+<li><p>v-model=”inputValue” 指的是数据的双向绑定</p>
+</li>
+</ul>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/todo.png" alt="todo"></p>
+<h2 id="5-使用组件化思想改变todolist"><a href="#5-使用组件化思想改变todolist" class="headerlink" title="5.使用组件化思想改变todolist"></a>5.使用组件化思想改变todolist</h2><ul>
+<li>v-bind语法： 向子组件传入一个绑定值 v-bind:content=’item’</li>
+</ul>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/zujian1.png" alt="todo"><br><img src="http://p62ygpqh0.bkt.clouddn.com/zujian2.png" alt="todo"></p>
+</li>
+</ul>
+<h2 id="4-实现一个todollist的部分功能"><a href="#4-实现一个todollist的部分功能" class="headerlink" title="4.实现一个todollist的部分功能"></a>4.实现一个todollist的部分功能</h2><ul>
+<li>v-for指令 v-for=’item in list’ 意思是告诉vue要循环list这个数据，循环的每一项都放在item中</li>
+<li><p>v-on指令：绑定事件；</p>
+<ul>
+<li><p>指的是在模板的button上面绑定一个事件</p>
+</li>
+<li><p>点击button的时候要在上面执行一个函数，函数的名字叫做“handleBtnClick” 所以v-on:click=”handleBtnClick”</p>
+</li>
+</ul>
+</li>
+<li><p>v-model=”inputValue” 指的是数据的双向绑定</p>
+</li>
+</ul>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/todo.png" alt="todo"></p>
+<h2 id="5-使用组件化思想改变todolist"><a href="#5-使用组件化思想改变todolist" class="headerlink" title="5.使用组件化思想改变todolist"></a>5.使用组件化思想改变todolist</h2><ul>
+<li>v-bind语法： 向子组件传入一个绑定值 v-bind:content=’item’</li>
+</ul>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/zujian1.png" alt="todo"><br><img src="http://p62ygpqh0.bkt.clouddn.com/zujian2.png" alt="todo"></p>
 
     </div>
 
@@ -198,10 +263,8 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2018/04/10/css个人总结-3/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
     
-    
-        <a href="/2018/04/08/前端/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+        <a href="/2018/04/12/git命令以及利用github搭建网站/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
     
 </div>
 
