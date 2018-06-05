@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>分类: 生活笔记 | wxcYa</title>
+<title>vue学习（7） | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -121,42 +121,168 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="vue学习（7）">
+            
+	            vue学习（7）
+            
+        </h1>
+        <div class="post-meta">
     
-        生活笔记 
     
-</h3>
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/观后感">
+            观后感
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/vue，项目目录，git">
+               vue，项目目录，git
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/06/04</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2018/03/14/生活笔记/">Gulp简介</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2018年03月14日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Gulp当下的前端开发
-不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了
-我们要提高效率，就必须减少重复的工作
-使用less之类预处理的CSS coffeescript
-提供开发阶段的便利，开...
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="vue-Project（1）"><a href="#vue-Project（1）" class="headerlink" title="vue Project（1）"></a>vue Project（1）</h1><h2 id="1-代码管理"><a href="#1-代码管理" class="headerlink" title="1.代码管理"></a>1.代码管理</h2><p>首先先找一个项目的托管仓库，将项目代码同步到远端，此处以“码云”为例</p>
+<h3 id="第一步：创建项目"><a href="#第一步：创建项目" class="headerlink" title="第一步：创建项目"></a>第一步：创建项目</h3><p><img src="http://p62ygpqh0.bkt.clouddn.com/mayun.png" alt="mayun"></p>
+<h3 id="第二步：本地代码和线上代码仓库通过git做关联，这样本地代码和线上就会同步保存"><a href="#第二步：本地代码和线上代码仓库通过git做关联，这样本地代码和线上就会同步保存" class="headerlink" title="第二步：本地代码和线上代码仓库通过git做关联，这样本地代码和线上就会同步保存"></a>第二步：本地代码和线上代码仓库通过git做关联，这样本地代码和线上就会同步保存</h3><ul>
+<li><p>在本地安装git</p>
+<ul>
+<li>git version 检验安装是否成功（若安装成功会出现版本号）</li>
+</ul>
+</li>
+<li><p>本地git和线上git关联</p>
+<ul>
+<li><p>点击设置输入命令（）</p>
+</li>
+<li><p>SSH公钥<br><img src="http://p62ygpqh0.bkt.clouddn.com/bu1.png" alt="mayun"></p>
+</li>
+<li><p>在git-bash中输入命令（ssh-keygen -t rsa -C “<a href="mailto:xxxxx@xxxxx.com" target="_blank" rel="noopener">xxxxx@xxxxx.com</a>“），生成公钥和私钥<br><img src="http://p62ygpqh0.bkt.clouddn.com/bu2.png" alt="mayun"></p>
+</li>
+<li><p>在git-bash中输入命令（cat ~/.ssh/id_rsa.pub），生成公钥<br><img src="http://p62ygpqh0.bkt.clouddn.com/bu3.png" alt="mayun"></p>
+</li>
+<li><p>将生成的公钥复制到SSH图中的公钥输入框中</p>
+</li>
+<li><p>本地会有一个私钥，这样本地和线上就打通了，代码可以通过命令进行同步</p>
+</li>
+</ul>
+</li>
+<li><p>将线上项目同步到本地（通过ssh的网址）<br><img src="http://p62ygpqh0.bkt.clouddn.com/bu4.png" alt="mayun"></p>
+<ul>
+<li>运行命令（git clone <a href="mailto:git@gitee.com" target="_blank" rel="noopener">git@gitee.com</a>:ccvtt/Travel.git），这样就将项目同步到本地</li>
+</ul>
+</li>
+<li><p>用命令工具（cli）构建vue项目<br><img src="http://p62ygpqh0.bkt.clouddn.com/vue1.png" alt="vue"></p>
+</li>
+<li><p>项目构建过程<br><img src="http://p62ygpqh0.bkt.clouddn.com/vueguocheng.png" alt="vue"></p>
+</li>
+<li><p>构建完之后会提示输入命令<br><img src="http://p62ygpqh0.bkt.clouddn.com/vue222.png" alt="vue"></p>
+</li>
+<li><p>将本地代码同步到码云</p>
+<ul>
+<li>git status</li>
+<li>git add .  <!-- 将本地文件提交到本地的git缓冲区 --></li>
+<li>git commit -m ‘project initial’</li>
+<li>git push</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>git add .  指的是将本地文件提交到本地的git缓冲区</p>
+</blockquote>
+<h2 id="2-项目目录讲解"><a href="#2-项目目录讲解" class="headerlink" title="2.项目目录讲解"></a>2.项目目录讲解</h2><ul>
+<li><p>node_modules存放依赖包</p>
+</li>
+<li><p>src存放项目的源代码 </p>
+<ul>
+<li>assets 存放图片资源</li>
+<li>components存放的是项目中的小组件</li>
+<li>router下面的index.js文件存放项目中所有的路由配置</li>
+<li>main.js是整个项目的入口文件</li>
+<li>app.vue是项目的最原始的根组件，也就是整个应用的根组件</li>
+</ul>
+</li>
+<li><p>config目录放的是项目的配置文件</p>
+<ul>
+<li>index.js基础的配置信息</li>
+<li>dev.env.js开发环境的信息</li>
+<li>prod.env.js线上环境的配置信息</li>
+</ul>
+</li>
+<li><p>build目录存放的是项目打包时webpack的配置信息 （由vue-cli自动构建好的webpack的配置集合）</p>
+</li>
+<li><p>static存放静态资源</p>
+</li>
+<li>index.html首页的模板文件</li>
+</ul>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/wenjian.png" alt="vue"></p>
+<h2 id="3-单文件组件与Vue中的路由"><a href="#3-单文件组件与Vue中的路由" class="headerlink" title="3.单文件组件与Vue中的路由"></a>3.单文件组件与Vue中的路由</h2><blockquote>
+<p>路由是根据网址的不同，返回不同的内容给用户</p>
+</blockquote>
+<blockquote>
+<p>@符号指的是 src这个目录</p>
+</blockquote>
+<blockquote>
+<p>路由的配置都放在router文件夹下的index.js中，app.vue是整个应用的根组件</p>
+</blockquote>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/impvue.png" alt="vue"></p>
+<h2 id="4-单页应用VS多页应用"><a href="#4-单页应用VS多页应用" class="headerlink" title="4.单页应用VS多页应用"></a>4.单页应用VS多页应用</h2><p><img src="http://p62ygpqh0.bkt.clouddn.com/duoye.png" alt="vue"></p>
+<p><strong> vue中的页面跳转 <code>&lt;router-link to=&#39;/list&#39;&gt;列表页&lt;/router-link&gt;</code></strong></p>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/danye.png" alt="vue"></p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/06/03/观后感/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
 
-
+    </div>
 
 
 
