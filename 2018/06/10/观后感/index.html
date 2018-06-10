@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>归档：2018/5 | wxcYa</title>
+<title>vue学习（9） | wxcYa</title>
 
 
     <link rel="alternate" href="/atom.xml" title="wxcYa" type="application/atom+xml">
@@ -121,33 +121,108 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">2018年 5月</h1>
-        
-          <li class="post-items" _href="/2018/05/31/观后感/">
-            <h3 class="post-item-title">
-            	<a href="/2018/05/31/观后感/"> vue学习（3） </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2018/05/30/观后感/">
-            <h3 class="post-item-title">
-            	<a href="/2018/05/30/观后感/"> vue学习（2） </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2018/05/28/观后感/">
-            <h3 class="post-item-title">
-            	<a href="/2018/05/28/观后感/"> vue学习（1） </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="vue学习（9）">
+            
+	            vue学习（9）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/观后感">
+            观后感
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/vue，axios， ajax，父子组组件间传值">
+               vue，axios， ajax，父子组组件间传值
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/06/10</span>
+    </span>
 </div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="vue-Project（3）"><a href="#vue-Project（3）" class="headerlink" title="vue Project（3）"></a>vue Project（3）</h1><h2 id="1-使用-axios-发送-ajax-请求"><a href="#1-使用-axios-发送-ajax-请求" class="headerlink" title="1.使用 axios 发送 ajax 请求"></a>1.使用 axios 发送 ajax 请求</h2><ul>
+<li><p>安装axios </p>
+<p><code>npm  install axios --save</code></p>
+</li>
+</ul>
+<blockquote>
+<p>整个首页发送一个ajax请求，所以在home.vue中发送一个请求是最好的，home组件获取过ajax请求之后可以把数据传递给每一个子组件。借助组件中的生命周期函数mounted，来获取ajax数据的获取</p>
+</blockquote>
+<ul>
+<li>开发环境的转发（路径转换）</li>
+</ul>
+<p>在config目录下的index.js文件中的proxyTable: {},加上需要替换的路径</p>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/hjing.png" alt="huanjing"></p>
+<ul>
+<li>ajax数据获取</li>
+</ul>
+<p>借助生命周期函数mounted(){}来进行ajax数据的获取，然后引入axios（import axios from ‘axios’），才能发送一个ajax请求,再就是在mounted中使用axios（this.getHomeInfo()）,当页面挂载好以后执行getHomeInfo()函数,函数要定义在methods中,具体可以看下面图片。<br><img src="http://p62ygpqh0.bkt.clouddn.com/axios.png" alt="axios"></p>
+<h2 id="2-利用ajax实现首页父子组组件间传值"><a href="#2-利用ajax实现首页父子组组件间传值" class="headerlink" title="2.利用ajax实现首页父子组组件间传值"></a>2.利用ajax实现首页父子组组件间传值</h2><p><img src="http://p62ygpqh0.bkt.clouddn.com/home-4.jpg" alt="home"></p>
+<p>传递过程是：将this.city中的cityc换地给了data中的city，然后city又传递给了子组件，子组件通过props接收到了city,这样子组件就会通过ajax接收到了数据，city发生变化，子组件中的city就会发生变化</p>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/zong.png" alt="gc"></p>
+<ul>
+<li>解决swiper第一次打开时显示最后一张图片的方法</li>
+</ul>
+<p>因为swiper的初次创建不是由完整数据创建，而不是空数组创建，所以显示的是最后一张不能显示第一张，解决方法如下</p>
+<p><img src="http://p62ygpqh0.bkt.clouddn.com/ff.png" alt="ff"></p>
+<p>结合计算属性的方式解决<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    showSwiper () &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.list.length</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/06/05/观后感/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<!--PC和WAP自适应版-->
+<div id="SOHUCS"></div>
+<script type="text/javascript">
+	(function(){var appid='cyt8KmUC1';var conf='prod_855a68d3b3d91855360a6215672a505a';var width=window.innerWidth||document.documentElement.clientWidth;if(width<960){window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id='+appid+'&conf='+conf+'"><\/script>');}else{var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}
+	c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});}})();
+</script>	
+
+    </div>
 
 
 
